@@ -82,7 +82,7 @@ const char fmt_det_point_pose[] = "{\"id\":%d, \"corners\": [{\"x\":%.2f,\"y\":%
 EMSCRIPTEN_KEEPALIVE
 int atagjs_init()
 {
-    g_tf = tag36h11_create();
+    g_tf = tagCircle21h7_create();
     if (g_tf == NULL)
     {
         printf("Error initializing tag family.");
@@ -102,7 +102,7 @@ int atagjs_init()
     g_td->refine_edges = 1;
     g_return_pose = 1;
 
-    for (int i=0; i<MAX_TAG_ID; i++)  g_tag_size[i] = 0.15; // default tag size (0.15 meters)
+    for (int i=0; i<MAX_TAG_ID; i++)  g_tag_size[i] = 0.04; // default tag size (40mm)
 
     return 0;
 }
@@ -112,7 +112,7 @@ EMSCRIPTEN_KEEPALIVE
 int atagjs_destroy()
 {
     apriltag_detector_destroy(g_td);
-    tag36h11_destroy(g_tf);
+    tagCircle21h7_destroy(g_tf);
     if (g_img_buf != NULL)
         free(g_img_buf);
 

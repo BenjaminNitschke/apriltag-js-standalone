@@ -18,8 +18,8 @@
 // maximum size of string for each detection
 #define STR_DET_LEN 1500
 
-// max id: 36h11 tag ids are up to 586
-#define MAX_TAG_ID 600
+// max id: 36h11 tag ids are up to 586, Circle21h7 has 38 unique tags
+#define MAX_TAG_ID 40
 
 /**
  * @brief Init the apriltag detector with given family and default options
