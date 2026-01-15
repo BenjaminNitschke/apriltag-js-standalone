@@ -15,8 +15,8 @@
 #include "apriltag_pose.h"
 #include "str_json.h"
 
-// maximum size of string for each detection
-#define STR_DET_LEN 1500
+// maximum size of string for each detection (increased to support multiple detections with pose data)
+#define STR_DET_LEN 3000
 
 // max id: 36h11 tag ids are up to 586, Circle21h7 has 38 unique tags
 #define MAX_TAG_ID 40
